@@ -1,0 +1,51 @@
+// Breakpoint mixin examples:
+// @include breakpoint(1200, min)
+// @include breakpoint(1200, max)
+// @include breakpoint(768, 1200)
+// ^ converts to (min-width: 1st arg) and (max-width: 2nd arg)
+
+@mixin breakpoint($point, $point-to: max) {
+	$breakpoints: 1400, 1200, 1100, 1024, 900, 768, 640, 540, 400;
+
+	@if $point-to == max or $point-to == min {
+		@for $i from 1 through length($breakpoints) {
+			@if $point == nth($breakpoints, $i) {
+				$subtract: 0;
+				@if $point-to == max {
+					$subtract: -1;
+				}
+				@media (#{$point-to}-width: #{nth($breakpoints, $i)+$subtract}px) {
+					@content;
+				}
+			}
+		}
+	} @else {
+		@for $i from 1 through length($breakpoints) {
+			@if $point == nth($breakpoints, $i) {
+				@for $j from 1 through length($breakpoints) {
+					@if $point-to == nth($breakpoints, $j) {
+						@media (min-width: #{nth($breakpoints, $i)}px) and (max-width: #{nth($breakpoints, $j)-1}px) {
+							@content;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@mixin cf {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+.cf {
+	@include cf;
+}

@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'Montserrat Semi-Bold';
+	src: url('fonts/Montserrat-SemiBold.otf') format('opentype');
+}
+
+@mixin font-regular {
+	font-family: 'Lato', Arial, sans-serif;
+	font-weight: normal;
+}
+
+@mixin font-regular-i {
+	font-family: 'Lato Italic', Arial, sans-serif;
+	font-style: italic;
+}
+
+@mixin font-regular-light {
+	font-family: 'Lato Light', Arial, sans-serif;
+	font-weight: lighter;
+}
+
+@mixin font-semi-bold {
+	font-family: 'Montserrat Semi-Bold', Arial, sans-serif;
+	font-weight: 600;
+}
+
+@mixin font-bold {
+	font-family: 'Montserrat', Arial, sans-serif;
+	font-weight: 800;
+}
+
+// Icomoon
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icons/icomoon.eot?yz5low');
+	src: url('fonts/icons/icomoon.eot?yz5low#iefix') format('embedded-opentype'),
+	url('fonts/icons/icomoon.ttf?yz5low') format('truetype'),
+	url('fonts/icons/icomoon.woff?yz5low') format('woff'),
+	url('fonts/icons/icomoon.svg?yz5low#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^='icon-'], [class*=' icon-'] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ico--facebook:before {
+	content: '\e900';
+}
+
+.icon-ico--instagram:before {
+	content: '\e901';
+}
+
+.icon-ico--twitter:before {
+	content: '\e902';
+}
+
+.icon-ico--youtube:before {
+	content: '\e903';
+}

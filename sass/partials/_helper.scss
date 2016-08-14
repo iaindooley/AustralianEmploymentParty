@@ -1,0 +1,110 @@
+.btn {
+	display: inline-block;
+	padding: 0.6em 1.3em;
+	border: 0;
+	border-radius: 0;
+	transition: all 0.15s;
+	color: $color-text-dark;
+	background-color: $color-primary;
+
+	&:hover {
+		cursor: pointer;
+		background-color: darken($color-primary, 8%);
+	}
+}
+
+.btn--cta {
+	@include font-semi-bold;
+	padding: 0.5em 1.1em;
+	font-size: 1.278em;
+}
+
+.btn--cta-big {
+	margin: 1em 0;
+
+	@include breakpoint(540) {
+		display: block;
+		font-size: 1.1em;
+		text-align: center;
+	}
+
+	@include breakpoint(768) {
+		display: block;
+		font-size: 1.3em;
+		text-align: center;
+	}
+
+	@include breakpoint(768, min) {
+		font-size: 1.722em;
+	}
+}
+
+.btn--arrow-icon {
+	position: relative;
+	padding-right: 2em;
+}
+
+.btn__arrow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 1.5em;
+	background: url('../images/arrow-right.png') no-repeat transparent;
+	background-size: contain;
+	background-position: right 0.2em center;
+}
+
+.text-regular {
+	@include font-regular;
+}
+
+.text-italic {
+	@include font-regular-i;
+}
+
+.text-light {
+	@include font-regular-light;
+}
+
+.text-semi-bold {
+	@include font-semi-bold;
+}
+
+.text-bold {
+	@include font-bold;
+}
+
+.text-emphasize {
+	color: $color-primary;
+}
+
+.text-hide {
+	display: block;
+	white-space: nowrap;
+	text-indent: 200%;
+	overflow: hidden;
+}
+
+.bullets-list {
+	margin: 1.5em 0;
+	padding: 0;
+	list-style: none;
+}
+
+.bullets-list__item {
+	position: relative;
+	padding-left: 2em;
+	margin-top: 1em;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0.35em;
+		left: 0;
+		width: 0.7em;
+		height: 0.7em;
+		border-radius: 50%;
+		border: 2px solid $color-text-dark;
+	}
+}

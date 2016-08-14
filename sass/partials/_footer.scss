@@ -1,0 +1,137 @@
+.site-footer {
+	color: $color-white;
+	background-color: $color-footer-bg;
+
+	@include breakpoint(768) {
+		text-align: center;
+	}
+
+	h4 {
+		@include font-regular;
+		margin: 0 0 0.3em;
+		font-size: 1.1em;
+		color: $color-brand-orange;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		line-height: 2;
+	}
+
+	ul,
+	p {
+		font-size: 0.8em;
+	}
+
+	p {
+		margin: 0;
+		padding: 0.5em 0;
+	}
+
+	a {
+		color: inherit;
+
+		&:hover {
+			color: $color-brand-orange;
+		}
+	}
+}
+
+.site-footer__grid {
+	padding: 1em 0;
+
+	@include breakpoint(768, min) {
+		display: flex;
+
+		.column-middle {
+			padding: 0 1em;
+		}
+
+	}
+
+	.col {
+		width: 100%;
+		margin-bottom: 1.5em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include breakpoint(768, min) {
+			width: 32%;
+			margin-bottom: 0;
+			white-space: nowrap;
+		}
+	}
+
+	.column-right {
+		@include breakpoint(768, min) {
+			flex-shrink: 0;
+			width: 200px;
+			padding-left: 1em;
+		}
+	}
+
+	.column-left {
+		width: 100%;
+	}
+}
+
+.footer-bottom {
+	background-color: $color-brand-gray;
+
+	@include breakpoint(768) {
+		padding: 1em;
+
+		p {
+			margin-bottom: 0;
+		}
+	}
+
+	.column-left {
+		white-space: normal;
+	}
+
+	.site-footer__grid,
+	p {
+		padding: 0;
+	}
+
+	.site-footer__grid {
+		align-items: center;
+
+		@include breakpoint(768, min) {
+			height: 60px;
+		}
+	}
+
+	.column-social {
+		height: 100%;
+	}
+
+	.social-icons {
+		height: inherit;
+
+		@include breakpoint(768, min) {
+			background-color: $color-brand-orange;
+		}
+	}
+
+	.social-icons__link {
+		padding: 0.6em;
+		color: $color-white;
+
+		@include breakpoint(768, min) {
+			color: $color-brand-gray;
+
+			&:hover {
+				color: $color-white;
+			}
+		}
+	}
+}
