@@ -1,6 +1,31 @@
 @font-face {
+	font-family: 'Lato';
+	src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato Italic';
+	src: url('fonts/Lato-Italic.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato Light';
+	src: url('fonts/Lato-Light.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Lato Thin';
+	src: url('fonts/Lato-Thin.ttf') format('truetype');
+}
+
+@font-face {
 	font-family: 'Montserrat Semi-Bold';
 	src: url('fonts/Montserrat-SemiBold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Montserrat Bold';
+	src: url('fonts/Montserrat-Bold.otf') format('opentype');
 }
 
 @mixin font-regular {
@@ -18,13 +43,18 @@
 	font-weight: lighter;
 }
 
+@mixin font-regular-thin {
+	font-family: 'Lato Thin', Arial, sans-serif;
+	font-weight: lighter;
+}
+
 @mixin font-semi-bold {
 	font-family: 'Montserrat Semi-Bold', Arial, sans-serif;
 	font-weight: 600;
 }
 
 @mixin font-bold {
-	font-family: 'Montserrat', Arial, sans-serif;
+	font-family: 'Montserrat Bold', Arial, sans-serif;
 	font-weight: 800;
 }
 

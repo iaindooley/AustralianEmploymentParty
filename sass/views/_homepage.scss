@@ -299,22 +299,6 @@
 		@include breakpoint(640) {
 			margin: 0 auto 1em;
 		}
-
-		@include breakpoint(1024, min) {
-			display: none;
-		}
-	}
-
-	.image-col {
-		display: none;
-
-		@include breakpoint(1024, min) {
-			display: block;
-		}
-
-		.profile-image {
-			display: block;
-		}
 	}
 }
 
