@@ -1,0 +1,80 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include font-regular;
+	font-size: 18px;
+}
+
+.page {
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	margin: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	color: $color-text-dark;
+}
+
+.site-content {
+	flex: 1 0 auto;
+}
+
+.site-footer {
+	flex: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	@include font-bold;
+	color: $color-text-dark;
+}
+
+h1 {
+	font-size: 2.4em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+p {
+	margin: 1em 0;
+	line-height: 1.5;
+}
+
+ul {
+	line-height: 1.4;
+}
+
+img {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	background-color: transparent;
+	text-decoration: none;
+	color: $color-primary;
+	transition: all 0.15s;
+}
+
+.input-text,
+textarea {
+	width: 100%;
+	padding: 0.5em;
+	border: 1px solid $color-light-gray;
+}
