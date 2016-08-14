@@ -1,6 +1,7 @@
-$(document).ready(function() {
-	$('.offcanvas--toggler').on('click', function(e) {
-		console.log('test');
-		$('body').toggleClass('offcanvas--show');
+var togglers = document.querySelectorAll('.offcanvas--toggler');
+
+for (var i = 0; i < togglers.length; i++) {
+	togglers[i].addEventListener('click', function() {
+		document.body.classList.toggle('offcanvas--show')
 	});
-});
+}
